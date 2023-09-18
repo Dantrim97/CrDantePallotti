@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Cliente
+from .static import *
 
 # Create your views here.
 
@@ -12,3 +13,16 @@ def cliente(req, nombre, cuit):
     return HttpResponse(f"""
     <p>Cliente: {cliente.nombre} - Cuit: {cliente.cuit} creado con exito</p>
     """)
+
+
+def Inicio (req):
+    return render(req,"inicio.html")
+
+def Socio (req):
+    return render(req,"Socio.html")
+
+def Equipo (req):    
+    return render(req,"Equipo.html")
+
+def Clientes(req):
+    return render(req,"Clientes.html")
