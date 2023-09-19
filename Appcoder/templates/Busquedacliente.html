@@ -1,0 +1,9 @@
+{% extends 'madre.html' %}
+
+{% block contenidoquecambia %}
+<form action="{% url 'busqueda'  %}" method="get">
+    <p><input type="text" name="nombre"></p>
+    <button type="submit"> ENVIAR </button>
+</form>
+
+{% endblock contenidoquecambia %}

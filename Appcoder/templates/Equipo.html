@@ -1,5 +1,11 @@
 {% extends 'madre.html' %}
 
 {% block contenidoquecambia %}
+<form action="{% url 'Equipo'  %}" method="post">{% csrf_token %}
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Apellido: <input type="text" name="apellido"></p>
+    <p>Mail: <input type="text" name="email"></p>
+    <button type="submit"> ENVIAR </button>
+</form>
 <h1>Bienvenido al equipo</h1>
 {% endblock contenidoquecambia %}

@@ -11,8 +11,17 @@ def Inicio (req):
 #def Servicio (req):
     return render(req,"Servicios.html") 
 
-def Equipo (req):    
-    return render(req,"Equipo.html")
+def Equipo (req):
+    print('method', req.method)
+    print('POST', req.POST)
+    
+    if req.method == 'POST':
+        equipo = Equipos(nombre=req.POST['nombre'], apellido=req.POST['apellido'],email=req.POST['email'])
+        equipo.save()
+        return render(req, "inicio.html")
+    else:
+        return render(req,"Equipo.html")
+    
 
 
 
@@ -37,3 +46,20 @@ def AdquirirServicios(req):
         return render(req, "inicio.html")
     else:
         return render(req, "adquirir.html")
+    
+
+def BusquedaCliente(req):
+    return render(req, "Busquedacliente.html")
+
+def Busqueda(req):
+    if req.GET["nombre"]:
+        nombre= req.GET["nombre"]
+        cliente = Cliente.objects.get(nombre=nombre)
+        return render(req, "resultadobusqueda.html", {"cliente":cliente})
+    else:
+        return HttpResponse(f"debe agregar al cliente")
+
+
+
+
+   
