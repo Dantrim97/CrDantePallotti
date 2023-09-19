@@ -1,9 +1,9 @@
 from django.urls import path
-from Appcoder.views import *
+from Appcoder.views import Equipo,Clientes,AdquirirServicios,Inicio
 
 urlpatterns =[
     #path('saluda/', saluda),
-    path('agrega-curso/<nombre>/<cuit>', cliente),
+    #path('agrega-curso/<nombre>/<cuit>',),
     path('', Inicio, name="Inicio"),
     #path('servicios/', Servicios, name="Servicios"),
     path('equipo/', Equipo, name="Equipo"),

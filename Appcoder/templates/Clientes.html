@@ -2,5 +2,11 @@
 
 {% block contenidoquecambia %}
 
+<form action="{% url 'Clientes'  %}" method="post">{% csrf_token %}
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>cuit: <input type="number" name="cuit"></p>
+    <button type="submit"> ENVIAR </button>
+</form>
+
 <h1> Bienvenidos clientes</h1>
 {% endblock contenidoquecambia %}

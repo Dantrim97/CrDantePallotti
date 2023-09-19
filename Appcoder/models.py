@@ -6,7 +6,7 @@ class Cliente(models.Model):
     nombre= models.CharField(max_length=40)
     cuit = models.IntegerField()
 
-class Equipo(models.Model):
+class Equipos(models.Model):
 
     nombre= models.CharField(max_length=40)
     apellido= models.CharField(max_length=40)
