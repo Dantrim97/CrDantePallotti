@@ -12,8 +12,11 @@ class Equipo(models.Model):
     apellido= models.CharField(max_length=40)
     email= models.EmailField()
 
-class Socio(models.Model):
+class Servicios(models.Model):
 
     nombre= models.CharField(max_length=40)
     apellido= models.CharField(max_length=40)
     email= models.EmailField()
+
+
+    #PRODUCTOS??

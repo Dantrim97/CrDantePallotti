@@ -18,11 +18,11 @@ def cliente(req, nombre, cuit):
 def Inicio (req):
     return render(req,"inicio.html")
 
-def Socio (req):
-    return render(req,"Socio.html")
+def Servicios (req):
+    return render(req,"Servicios.html") 
 
 def Equipo (req):    
     return render(req,"Equipo.html")
 
-def Clientes(req):
+def Clientes (req):
     return render(req,"Clientes.html")
